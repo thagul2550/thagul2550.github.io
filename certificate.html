@@ -2,48 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Certificates</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="container">
-    <nav aria-label="main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a class="active" href="certificate.html">Certificates</a>
-      <a href="projects.html">Projects</a>
-    </nav>
-  </div>
+  <nav class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./about.html">About</a>
+    <a href="./projects.html">Projects</a>
+    <a href="./certificate.html" class="active">Certificates</a>
+  </nav>
 </header>
 
 <main>
-  <section class="content container fade-in">
-    <div class="section-title"><h2>Certificates & Awards</h2></div>
+  <section class="cert-section">
 
-    <div class="certs">
-      <div class="card cert">
-        <h3>🏆 CAI CLUB HACKATHON</h3>
-        <p class="muted">1st Runner-Up – AI Innovator Show & Share Day</p>
-        <div class="year">2024 · CAI CLUB</div>
-      </div>
+    <h1 class="cert-title">Certificates</h1>
+    <p class="cert-subtitle">
+      Academic and professional certifications
+    </p>
 
-      <div class="card cert">
-        <h3>🤖 Super AI Engineer Season 5</h3>
-        <p class="muted">Selected to present project at National AI Exhibition</p>
-        <div class="year">2024 · National AI Exhibition</div>
-      </div>
+    <div class="cert-grid">
+
+      <!-- Certificate 1 -->
+      <article class="cert-card">
+        <div class="cert-info">
+          <span class="cert-year">2024</span>
+          <h3 class="cert-name">AI for Preventive Maintenance</h3>
+          <p class="cert-org">7-ELEVEN Innovation Program</p>
+          <span class="cert-type">AI / Computer Vision</span>
+        </div>
+      </article>
+
+      <!-- Certificate 2 -->
+      <article class="cert-card">
+        <div class="cert-info">
+          <span class="cert-year">2024</span>
+          <h3 class="cert-name">TestSmith Project Certificate</h3>
+          <p class="cert-org">University Project Evaluation</p>
+          <span class="cert-type">Software Engineering</span>
+        </div>
+      </article>
+
+      <!-- Certificate 3 -->
+      <article class="cert-card">
+        <div class="cert-info">
+          <span class="cert-year">2025</span>
+          <h3 class="cert-name">Web Development Fundamentals</h3>
+          <p class="cert-org">Online Learning Platform</p>
+          <span class="cert-type">Web Development</span>
+        </div>
+      </article>
+
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="container small muted">Certificates are sourced from competitions and exhibitions.</div>
+<footer class="site-footer">
+  <p>© 2025 Your Name</p>
 </footer>
 
 </body>

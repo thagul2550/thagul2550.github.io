@@ -585,3 +585,429 @@ footer{
     align-items:flex-start;
   }
 }
+/* ===== COMPETITIONS ===== */
+.comp-grid{
+  display:grid;
+  gap:22px;
+}
+
+/* Card */
+.comp-card{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.04),
+    rgba(255,255,255,.02)
+  );
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:0 15px 40px rgba(0,0,0,.6);
+  transition:.25s;
+}
+
+.comp-card:hover{
+  transform:translateY(-4px);
+}
+
+/* Header */
+.comp-header{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.comp-header h3{
+  margin:0;
+  font-size:1rem;
+  max-width:760px;
+}
+
+/* Date Badge */
+.comp-date{
+  padding:6px 14px;
+  border-radius:999px;
+  background:rgba(59,130,246,.18);
+  color:#93c5fd;
+  font-weight:700;
+  font-size:.8rem;
+  white-space:nowrap;
+}
+
+/* Organization */
+.comp-org{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+/* Highlight (รางวัลเด่น) */
+.comp-card.highlight{
+  border:1px solid rgba(59,130,246,.35);
+  box-shadow:
+    0 0 0 1px rgba(59,130,246,.15),
+    0 20px 45px rgba(0,0,0,.7);
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .comp-header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+/* ===== COMPETITIONS SCROLL ===== */
+.comp-scroll{
+  max-height:420px;
+  overflow-y:auto;
+  padding:18px;
+  border-radius:16px;
+
+  background:linear-gradient(
+    180deg,
+    rgba(59,130,246,.08),
+    rgba(15,23,42,.85)
+  );
+
+  border:1px solid rgba(59,130,246,.35);
+
+  box-shadow:
+    0 0 0 1px rgba(59,130,246,.2),
+    0 20px 50px rgba(0,0,0,.75);
+}
+
+/* ===== SCROLLBAR STYLE ===== */
+
+/* Chrome / Edge / Safari */
+.comp-scroll::-webkit-scrollbar{
+  width:8px;
+}
+
+.comp-scroll::-webkit-scrollbar-track{
+  background:rgba(255,255,255,.05);
+  border-radius:999px;
+}
+
+.comp-scroll::-webkit-scrollbar-thumb{
+  background:rgba(59,130,246,.55);
+  border-radius:999px;
+}
+
+/* Firefox */
+.comp-scroll{
+  scrollbar-width:thin;
+  scrollbar-color: rgba(59,130,246,.55) rgba(255,255,255,.05);
+}
+/* ===== SKILLS ENHANCED ===== */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:26px;
+}
+
+/* Card */
+.skill-card{
+  position:relative;
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02)
+  );
+  border-radius:18px;
+  padding:28px;
+  box-shadow:0 15px 40px rgba(0,0,0,.65);
+  transition:.25s;
+  overflow:hidden;
+}
+
+/* Accent line ด้านบน */
+.skill-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:2px;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
+  opacity:.9;
+}
+
+/* Hover */
+.skill-card:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 0 0 1px rgba(59,130,246,.25),
+    0 25px 55px rgba(0,0,0,.75);
+}
+
+/* Title */
+.skill-card h4{
+  margin:0 0 16px;
+  font-size:1.1rem;
+  color:#3b82f6;
+  letter-spacing:.3px;
+}
+
+/* Text */
+.skill-card p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.8;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .skills-grid{
+    grid-template-columns:1fr;
+  }
+}
+/* ===== BASE ===== */
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:'Inter', sans-serif;
+  background:#0b1220;
+  color:#e5e7eb;
+}
+
+/* ===== HEADER ===== */
+.site-header{
+  padding:20px 6%;
+}
+
+.nav{
+  display:flex;
+  gap:24px;
+}
+
+.nav a{
+  color:#9ca3af;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.nav a.active,
+.nav a:hover{
+  color:#3b82f6;
+}
+
+/* ===== PROJECTS ===== */
+.projects-section{
+  padding:80px 6%;
+}
+
+.projects-title{
+  text-align:center;
+  font-size:2.6rem;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.projects-subtitle{
+  text-align:center;
+  color:#9ca3af;
+  margin-bottom:60px;
+}
+
+/* Grid */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+/* Card */
+.project-card{
+  display:flex;
+  flex-direction:column;
+  border-radius:20px;
+  overflow:hidden;
+  background:#0f172a;
+  box-shadow:0 20px 45px rgba(0,0,0,.6);
+  transition:.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-6px);
+}
+
+/* ===== TOP IMAGE (ไม่ตัดรูป) ===== */
+.project-image{
+  height:280px;              /* ปรับได้: 260–320 */
+  background:#020617;        /* พื้นหลังกรณีรูปไม่เต็ม */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.project-image img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;        /* ⭐ สำคัญ: ไม่ตัดรูป */
+}
+
+/* ===== BOTTOM INFO ===== */
+.project-info{
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  background:#111827;
+}
+
+/* Meta */
+.project-meta{
+  font-size:.75rem;
+  color:#3b82f6;
+}
+
+/* Title */
+.project-name{
+  font-size:1.05rem;
+  margin:0;
+  color:#f9fafb;
+}
+
+/* Description */
+.project-desc{
+  font-size:.85rem;
+  line-height:1.6;
+  color:#e5e7eb;
+
+  /* จำกัด 3 บรรทัด */
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+/* Tags */
+.project-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:auto;
+}
+
+.project-tags span{
+  padding:5px 14px;
+  border-radius:999px;
+  background:rgba(59,130,246,.35);
+  color:#dbeafe;
+  font-size:.75rem;
+  font-weight:600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:1000px){
+  .projects-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:600px){
+  .projects-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project-image{
+    height:240px;
+  }
+}
+/* ===== CERTIFICATES ===== */
+.cert-section{
+  padding:80px 6%;
+}
+
+.cert-title{
+  text-align:center;
+  font-size:2.6rem;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.cert-subtitle{
+  text-align:center;
+  color:#9ca3af;
+  margin-bottom:60px;
+}
+
+/* Grid */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+/* Card */
+.cert-card{
+  background:#0f172a;
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 20px 45px rgba(0,0,0,.6);
+  transition:.3s;
+}
+
+.cert-card:hover{
+  transform:translateY(-6px);
+}
+
+/* Info */
+.cert-info{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+/* Year */
+.cert-year{
+  font-size:.8rem;
+  color:#34d399;
+  font-weight:600;
+}
+
+/* Name */
+.cert-name{
+  margin:0;
+  font-size:1.1rem;
+  color:#f9fafb;
+}
+
+/* Organization */
+.cert-org{
+  margin:0;
+  font-size:.9rem;
+  color:#cbd5e1;
+}
+
+/* Type tag */
+.cert-type{
+  margin-top:10px;
+  align-self:flex-start;
+  padding:5px 14px;
+  border-radius:999px;
+  background:rgba(59,130,246,.35);
+  color:#dbeafe;
+  font-size:.75rem;
+  font-weight:600;
+}
+
+/* Responsive */
+@media (max-width:1000px){
+  .cert-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:600px){
+  .cert-grid{
+    grid-template-columns:1fr;
+  }
+}
