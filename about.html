@@ -11,7 +11,8 @@
 
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+<body class="page-about">
 
 <header class="site-header">
   <div class="container">
@@ -26,11 +27,11 @@
 
 <main>
 
-<!-- ===== ABOUT INTRO ===== -->
+<!-- ===== ABOUT INTRO (IMAGE LEFT / TEXT RIGHT) ===== -->
 <section class="about-hero container fade-in">
   <div class="about-grid">
 
-    <!-- LEFT -->
+    <!-- LEFT : IMAGE -->
     <div class="about-profile">
       <img src="assets/images/profile.jpg" alt="Thagul Nantasuwan">
       <p class="connect-text">Let’s Connect</p>
@@ -42,8 +43,8 @@
       </div>
     </div>
 
-    <!-- RIGHT -->
-    <div>
+    <!-- RIGHT : INTRO -->
+    <div class="about-content">
       <h1 class="about-name">
         Thagul <span>Nantasuwan</span>
       </h1>
@@ -54,15 +55,15 @@
 
       <p class="about-text">
         A Computer Engineering student at Chulalongkorn University with a strong
-        foundation in competitive programming and a growing interest in web
+        background in competitive programming and a growing interest in web
         development and artificial intelligence, particularly the application
         of OpenAI and large language models (LLMs).
       </p>
 
       <p class="about-text">
-        Experience has been built through hands-on projects, system testing,
-        and real-world technical environments, fostering strong analytical
-        thinking, problem-solving skills, and a continuous drive for learning.
+        Skills and experience have been developed through hands-on projects,
+        system testing, and real-world technical environments, fostering strong
+        analytical thinking and a continuous drive for learning.
       </p>
 
       <div class="about-tags">
@@ -76,7 +77,7 @@
   </div>
 </section>
 
-<!-- ===== EDUCATION ===== -->
+<!-- ===== EDUCATION (TIMELINE ONLY) ===== -->
 <section class="content container">
   <div class="section-title">
     <h2>Education</h2>
@@ -112,7 +113,7 @@
   </div>
 </section>
 
-<!-- ===== SKILLS ===== -->
+<!-- ===== SKILLS (CARDS) ===== -->
 <section class="content container">
   <div class="section-title">
     <h2>Skills</h2>
@@ -139,38 +140,35 @@
   </div>
 </section>
 
-<!-- ===== WORK EXPERIENCE ===== -->
+<!-- ===== WORK EXPERIENCE (CARD) ===== -->
 <section class="content container">
   <div class="section-title">
     <h2>Work Experience</h2>
   </div>
 
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-icon">💼</div>
-      <div class="timeline-content">
-        <h3>King Mongkut's Institute of Technology Ladkrabang</h3>
-        <span class="timeline-date">Student Intern</span>
-        <p>
-          Assisted in real-world IT tasks including computer hardware setup,
-          CPU components, and LAN/network cabling. Supported system testing
-          and verification for the university’s grader system.
-        </p>
-      </div>
-    </div>
+  <div class="card">
+    <h3>King Mongkut's Institute of Technology Ladkrabang</h3>
+    <span class="timeline-date">Student Intern</span>
+    <p>
+      Assisted in real-world IT tasks including computer hardware setup,
+      CPU components, and LAN/network cabling. Supported system testing
+      and verification for the university’s grader system.
+    </p>
   </div>
 </section>
 
-<!-- ===== COMPETITIONS ===== -->
+<!-- ===== COMPETITIONS (CARD) ===== -->
 <section class="content container">
   <div class="section-title">
     <h2>Competitions</h2>
   </div>
 
-  <p class="muted">
-    Participation in competitive programming and academic competitions
-    as detailed in the resume.
-  </p>
+  <div class="card">
+    <p class="muted">
+      Participation in competitive programming and academic competitions
+      as listed in the resume.
+    </p>
+  </div>
 </section>
 
 </main>
