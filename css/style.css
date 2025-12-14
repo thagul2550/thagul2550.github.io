@@ -393,3 +393,195 @@ footer{
     grid-template-columns:1fr;
   }
 }
+/* ===== EDUCATION TIMELINE ===== */
+.edu-timeline{
+  position:relative;
+  display:grid;
+  gap:40px;
+  padding-left:28px;
+}
+
+.edu-timeline::before{
+  content:"";
+  position:absolute;
+  left:6px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(
+    180deg,
+    transparent,
+    #3b82f6,
+    transparent
+  );
+}
+
+/* Item */
+.edu-item{
+  position:relative;
+  display:flex;
+  gap:26px;
+}
+
+.edu-dot{
+  position:absolute;
+  left:-28px;
+  top:32px;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:#3b82f6;
+  box-shadow:0 0 0 6px rgba(34,197,94,.15);
+}
+
+/* Card */
+.edu-card{
+  flex:1;
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02)
+  );
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:0 15px 40px rgba(0,0,0,.6);
+}
+
+/* Header */
+.edu-header{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+}
+
+.edu-title{
+  display:flex;
+  gap:16px;
+}
+
+.edu-title img{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  border-radius:10px;
+  background:white;
+  padding:6px;
+}
+
+.edu-title h3{
+  margin:0;
+}
+
+.edu-major{
+  color:#3b82f6;
+  font-weight:600;
+  margin:4px 0;
+}
+
+.edu-location{
+  font-size:.9rem;
+  color:var(--muted);
+}
+
+/* Date Badge */
+.edu-date{
+  text-align:right;
+}
+
+.edu-date span{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:999px;
+  background:#3b82f6;
+  color:#ffffff;
+  font-weight:700;
+  font-size:.85rem;
+}
+
+.edu-date small{
+  display:block;
+  margin-top:6px;
+  font-size:.8rem;
+  color:#3b82f6;
+}
+
+/* Description */
+.edu-desc{
+  margin-top:16px;
+  color:var(--muted);
+  max-width:800px;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .edu-header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .edu-date{
+    text-align:left;
+  }
+}
+/* ===== EXPERIENCE ===== */
+.exp-list{
+  display:grid;
+  gap:26px;
+}
+
+/* Card */
+.exp-card{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.04),
+    rgba(255,255,255,.02)
+  );
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:0 15px 40px rgba(0,0,0,.6);
+}
+
+/* Header */
+.exp-header{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+}
+
+.exp-title h3{
+  margin:0;
+}
+
+.exp-role{
+  margin:6px 0 0;
+  color:#3b82f6;
+  font-weight:600;
+}
+
+/* Badge */
+.exp-date span{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:999px;
+  background:rgba(59,130,246,.18);
+  color:#3b82f6;
+  font-weight:700;
+  font-size:.85rem;
+}
+
+/* Description */
+.exp-desc{
+  margin-top:16px;
+  color:var(--muted);
+  max-width:800px;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .exp-header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
