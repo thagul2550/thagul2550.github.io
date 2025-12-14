@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Main CSS -->
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -31,24 +32,24 @@
   <div class="cert-scroll">
     <div class="cert-grid">
 
-      <!-- IMAGES -->
-      <article class="cert-card image" data-src="./assets/images/superai.png">Super AI Program</article>
-      <article class="cert-card image" data-src="./assets/images/posn.jpg">POSN Camp</article>
-      <article class="cert-card image" data-src="./assets/images/aiat.jpg">AIAT Certificate</article>
-      <article class="cert-card image" data-src="./assets/images/cai.png">CAI Program</article>
-      <article class="cert-card image" data-src="./assets/images/supa.png">SUPA AI</article>
-      <article class="cert-card image" data-src="./assets/images/Ai.jpg">AI Training</article>
-      <article class="cert-card image" data-src="./assets/images/WRG.png">WRG Competition</article>
+      <!-- ===== IMAGE CERTIFICATES ===== -->
+      <article class="cert-card image" data-src="assets/images/superai.png">Super AI Program</article>
+      <article class="cert-card image" data-src="assets/images/posn.jpg">POSN Camp</article>
+      <article class="cert-card image" data-src="assets/images/aiat.jpg">AIAT Certificate</article>
+      <article class="cert-card image" data-src="assets/images/cai.png">CAI Program</article>
+      <article class="cert-card image" data-src="assets/images/supa.png">SUPA AI</article>
+      <article class="cert-card image" data-src="assets/images/Ai.jpg">AI Training</article>
+      <article class="cert-card image" data-src="assets/images/WRG.png">WRG Competition</article>
 
-      <!-- PDFS -->
-      <article class="cert-card pdf" data-src="./assets/pdfs/google.pdf">Google Certificate</article>
-      <article class="cert-card pdf" data-src="./assets/pdfs/cyber2025.pdf">Cybersecurity 2025</article>
-      <article class="cert-card pdf" data-src="./assets/pdfs/ai-engineer.pdf">AI Engineer</article>
-      <article class="cert-card pdf" data-src="./assets/pdfs/cyber2024.pdf">Cybersecurity 2024</article>
-      <article class="cert-card pdf" data-src="./assets/pdfs/vision.pdf">Computer Vision</article>
-      <article class="cert-card pdf" data-src="./assets/pdfs/dt.pdf">Data Technology</article>
-      <article class="cert-card pdf" data-src="./assets/pdfs/py.pdf">Python Programming</article>
-      <article class="cert-card pdf" data-src="./assets/pdfs/nn.pdf">Neural Networks</article>
+      <!-- ===== PDF CERTIFICATES AS IMAGES ===== -->
+      <article class="cert-card image" data-src="assets/images/google.png">Google Certificate</article>
+      <article class="cert-card image" data-src="assets/images/cyber2025.png">Cybersecurity 2025</article>
+      <article class="cert-card image" data-src="assets/images/ai-engineer.png">AI Engineer</article>
+      <article class="cert-card image" data-src="assets/images/cyber2024.png">Cybersecurity 2024</article>
+      <article class="cert-card image" data-src="assets/images/vision.png">Computer Vision</article>
+      <article class="cert-card image" data-src="assets/images/dt.png">Data Technology</article>
+      <article class="cert-card image" data-src="assets/images/py.png">Python Programming</article>
+      <article class="cert-card image" data-src="assets/images/nn.png">Neural Networks</article>
 
     </div>
   </div>
@@ -57,9 +58,10 @@
 </main>
 
 <footer class="site-footer">
+  © 2025 Your Name
 </footer>
 
-<!-- MODAL (IMAGE ONLY) -->
+<!-- ===== IMAGE MODAL ===== -->
 <div class="cert-modal" id="certModal">
   <span class="cert-close" id="certClose">&times;</span>
   <img id="certModalImg" alt="Certificate Image">
@@ -70,21 +72,17 @@
   const modalImg = document.getElementById('certModalImg');
   const closeBtn = document.getElementById('certClose');
 
-  document.querySelectorAll('.cert-card').forEach(card => {
+  document.querySelectorAll('.cert-card.image').forEach(card => {
     card.addEventListener('click', () => {
-      const src = card.dataset.src;
-
-      if(card.classList.contains('image')){
-        modalImg.src = src;
-        modal.classList.add('active');
-      } else {
-        window.open(src, '_blank');
-      }
+      modalImg.src = card.dataset.src;
+      modal.classList.add('active');
     });
   });
 
   closeBtn.onclick = () => modal.classList.remove('active');
-  modal.onclick = (e) => { if(e.target === modal) modal.classList.remove('active'); };
+  modal.onclick = (e) => {
+    if(e.target === modal) modal.classList.remove('active');
+  };
 </script>
 
 </body>
