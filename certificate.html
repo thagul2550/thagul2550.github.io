@@ -23,52 +23,69 @@
 </header>
 
 <main>
-  <section class="cert-section">
+<section class="cert-section">
 
-    <h1 class="cert-title">Certificates</h1>
-    <p class="cert-subtitle">
-      Academic and professional certifications
-    </p>
+  <h1 class="cert-title">Certificates</h1>
+  <p class="cert-subtitle">Academic and professional achievements</p>
 
+  <div class="cert-scroll">
     <div class="cert-grid">
 
-      <!-- Certificate 1 -->
-      <article class="cert-card">
-        <div class="cert-info">
-          <span class="cert-year">2024</span>
-          <h3 class="cert-name">AI for Preventive Maintenance</h3>
-          <p class="cert-org">7-ELEVEN Innovation Program</p>
-          <span class="cert-type">AI / Computer Vision</span>
-        </div>
-      </article>
+      <!-- IMAGES -->
+      <article class="cert-card image" data-src="./assets/images/superai.png">Super AI Program</article>
+      <article class="cert-card image" data-src="./assets/images/posn.jpg">POSN Camp</article>
+      <article class="cert-card image" data-src="./assets/images/aiat.jpg">AIAT Certificate</article>
+      <article class="cert-card image" data-src="./assets/images/cai.png">CAI Program</article>
+      <article class="cert-card image" data-src="./assets/images/supa.png">SUPA AI</article>
+      <article class="cert-card image" data-src="./assets/images/Ai.jpg">AI Training</article>
+      <article class="cert-card image" data-src="./assets/images/WRG.png">WRG Competition</article>
 
-      <!-- Certificate 2 -->
-      <article class="cert-card">
-        <div class="cert-info">
-          <span class="cert-year">2024</span>
-          <h3 class="cert-name">TestSmith Project Certificate</h3>
-          <p class="cert-org">University Project Evaluation</p>
-          <span class="cert-type">Software Engineering</span>
-        </div>
-      </article>
-
-      <!-- Certificate 3 -->
-      <article class="cert-card">
-        <div class="cert-info">
-          <span class="cert-year">2025</span>
-          <h3 class="cert-name">Web Development Fundamentals</h3>
-          <p class="cert-org">Online Learning Platform</p>
-          <span class="cert-type">Web Development</span>
-        </div>
-      </article>
+      <!-- PDFS -->
+      <article class="cert-card pdf" data-src="./assets/pdfs/google.pdf">Google Certificate</article>
+      <article class="cert-card pdf" data-src="./assets/pdfs/cyber2025.pdf">Cybersecurity 2025</article>
+      <article class="cert-card pdf" data-src="./assets/pdfs/ai-engineer.pdf">AI Engineer</article>
+      <article class="cert-card pdf" data-src="./assets/pdfs/cyber2024.pdf">Cybersecurity 2024</article>
+      <article class="cert-card pdf" data-src="./assets/pdfs/vision.pdf">Computer Vision</article>
+      <article class="cert-card pdf" data-src="./assets/pdfs/dt.pdf">Data Technology</article>
+      <article class="cert-card pdf" data-src="./assets/pdfs/py.pdf">Python Programming</article>
+      <article class="cert-card pdf" data-src="./assets/pdfs/nn.pdf">Neural Networks</article>
 
     </div>
-  </section>
+  </div>
+
+</section>
 </main>
 
 <footer class="site-footer">
-  <p>© 2025 Your Name</p>
 </footer>
+
+<!-- MODAL (IMAGE ONLY) -->
+<div class="cert-modal" id="certModal">
+  <span class="cert-close" id="certClose">&times;</span>
+  <img id="certModalImg" alt="Certificate Image">
+</div>
+
+<script>
+  const modal = document.getElementById('certModal');
+  const modalImg = document.getElementById('certModalImg');
+  const closeBtn = document.getElementById('certClose');
+
+  document.querySelectorAll('.cert-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const src = card.dataset.src;
+
+      if(card.classList.contains('image')){
+        modalImg.src = src;
+        modal.classList.add('active');
+      } else {
+        window.open(src, '_blank');
+      }
+    });
+  });
+
+  closeBtn.onclick = () => modal.classList.remove('active');
+  modal.onclick = (e) => { if(e.target === modal) modal.classList.remove('active'); };
+</script>
 
 </body>
 </html>
