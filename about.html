@@ -11,9 +11,9 @@
 
   <link rel="stylesheet" href="css/style.css">
 </head>
+<body>
 
-<body class="page-about">
-
+<!-- ===== HEADER ===== -->
 <header class="site-header">
   <div class="container">
     <nav>
@@ -27,15 +27,15 @@
 
 <main>
 
-<!-- ===== ABOUT INTRO (IMAGE LEFT / TEXT RIGHT) ===== -->
-<section class="about-hero container fade-in">
+<!-- ===== ABOUT INTRO ===== -->
+<section class="about-hero container">
   <div class="about-grid">
 
-    <!-- LEFT : IMAGE -->
+    <!-- LEFT -->
     <div class="about-profile">
       <img src="assets/images/profile.jpg" alt="Thagul Nantasuwan">
-      <p class="connect-text">Let’s Connect</p>
 
+      <p class="connect-text">Let’s Connect</p>
       <div class="social-links">
         <a href="#" aria-label="GitHub">🐙</a>
         <a href="#" aria-label="LinkedIn">💼</a>
@@ -43,7 +43,7 @@
       </div>
     </div>
 
-    <!-- RIGHT : INTRO -->
+    <!-- RIGHT -->
     <div class="about-content">
       <h1 class="about-name">
         Thagul <span>Nantasuwan</span>
@@ -55,15 +55,15 @@
 
       <p class="about-text">
         A Computer Engineering student at Chulalongkorn University with a strong
-        background in competitive programming and a growing interest in web
-        development and artificial intelligence, particularly the application
-        of OpenAI and large language models (LLMs).
+        background in competitive programming. Deeply interested in web
+        development and the application of artificial intelligence, particularly
+        OpenAI and large language models (LLMs), to solve complex problems.
       </p>
 
       <p class="about-text">
-        Skills and experience have been developed through hands-on projects,
-        system testing, and real-world technical environments, fostering strong
-        analytical thinking and a continuous drive for learning.
+        Strategic and analytical thinking have been continuously developed
+        through programming challenges and hands-on experience, alongside a
+        strong motivation to learn and grow in real-world environments.
       </p>
 
       <div class="about-tags">
@@ -77,43 +77,36 @@
   </div>
 </section>
 
-<!-- ===== EDUCATION (TIMELINE ONLY) ===== -->
+<!-- ===== EDUCATION ===== -->
 <section class="content container">
   <div class="section-title">
     <h2>Education</h2>
   </div>
 
-  <div class="timeline">
+  <!-- Timeline จะใส่ CSS เพิ่มทีหลัง -->
+  <div class="card">
+    <h3>Chulalongkorn University</h3>
+    <p class="muted">
+      2025 – Present<br>
+      Bachelor of Engineering<br>
+      Computer Engineering and Digital Technology (CEDT)<br>
+      Bangkok, Thailand
+    </p>
+  </div>
 
-    <div class="timeline-item">
-      <div class="timeline-icon">🎓</div>
-      <div class="timeline-content">
-        <h3>Chulalongkorn University</h3>
-        <span class="timeline-date">2025 – Present</span>
-        <p>
-          Bachelor of Engineering<br>
-          Computer Engineering and Digital Technology (CEDT)<br>
-          Bangkok, Thailand
-        </p>
-      </div>
-    </div>
+  <br>
 
-    <div class="timeline-item">
-      <div class="timeline-icon">🏫</div>
-      <div class="timeline-content">
-        <h3>Benjamarachutit School</h3>
-        <span class="timeline-date">2019 – 2025</span>
-        <p>
-          Computer Engineering and Technology (CET)<br>
-          Nakhon Si Thammarat, Thailand
-        </p>
-      </div>
-    </div>
-
+  <div class="card">
+    <h3>Benjamarachutit School</h3>
+    <p class="muted">
+      2019 – 2025<br>
+      Computer Engineering and Technology (CET)<br>
+      Nakhon Si Thammarat, Thailand
+    </p>
   </div>
 </section>
 
-<!-- ===== SKILLS (CARDS) ===== -->
+<!-- ===== SKILLS ===== -->
 <section class="content container">
   <div class="section-title">
     <h2>Skills</h2>
@@ -140,7 +133,7 @@
   </div>
 </section>
 
-<!-- ===== WORK EXPERIENCE (CARD) ===== -->
+<!-- ===== WORK EXPERIENCE ===== -->
 <section class="content container">
   <div class="section-title">
     <h2>Work Experience</h2>
@@ -148,16 +141,16 @@
 
   <div class="card">
     <h3>King Mongkut's Institute of Technology Ladkrabang</h3>
-    <span class="timeline-date">Student Intern</span>
-    <p>
-      Assisted in real-world IT tasks including computer hardware setup,
-      CPU components, and LAN/network cabling. Supported system testing
-      and verification for the university’s grader system.
+    <p class="muted">
+      Student Intern<br><br>
+      Assisted in real-world IT tasks under supervision, including computer
+      hardware setup, CPU components, and LAN/network cabling. Also supported
+      system testing and verification for the university’s grader system.
     </p>
   </div>
 </section>
 
-<!-- ===== COMPETITIONS (CARD) ===== -->
+<!-- ===== COMPETITIONS ===== -->
 <section class="content container">
   <div class="section-title">
     <h2>Competitions</h2>
@@ -165,17 +158,17 @@
 
   <div class="card">
     <p class="muted">
-      Participation in competitive programming and academic competitions
-      as listed in the resume.
+      Competitive programming and academic competitions as listed in the resume.
     </p>
   </div>
 </section>
 
 </main>
 
+<!-- ===== FOOTER ===== -->
 <footer>
-  <div class="container small muted">
-    © 2025 Thagul Nantasuwan · Built with HTML & CSS · GitHub Pages
+  <div class="container">
+    © 2025 Thagul Nantasuwan · Built with HTML & CSS
   </div>
 </footer>
 
