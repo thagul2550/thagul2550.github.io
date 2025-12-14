@@ -153,69 +153,122 @@ nav a.active{
   box-shadow:0 15px 40px rgba(0,0,0,.6);
 }
 
-/* ===== Timeline (Line + Icon) ===== */
+/* ===== Timeline (Larger + Centered + Highlighted) ===== */
 .timeline{
   position:relative;
+  margin-top:48px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:880px;          /* ✅ ไม่ชิดขอบ */
+  padding-left:96px;        /* ✅ ระยะจากเส้นถึงกล่อง */
   display:grid;
-  gap:40px;
-  margin-top:32px;
+  gap:48px;
 }
 
+/* vertical line */
 .timeline::before{
   content:"";
   position:absolute;
-  left:18px;
+  left:48px;
   top:0;
   bottom:0;
-  width:2px;
+  width:3px;                /* ✅ เส้นหนาขึ้น */
   background:linear-gradient(
     to bottom,
     transparent,
-    rgba(59,130,246,.45),
+    rgba(59,130,246,.6),
     transparent
   );
 }
 
+/* item */
 .timeline-item{
-  display:grid;
-  grid-template-columns:40px 1fr;
-  gap:24px;
+  position:relative;
 }
 
+/* icon */
 .timeline-icon{
-  width:36px;
-  height:36px;
+  position:absolute;
+  left:-96px;
+  top:28px;
+  width:52px;               /* ✅ icon ใหญ่ขึ้น */
+  height:52px;
   border-radius:50%;
-  background:rgba(59,130,246,.18);
-  color:#93c5fd;
+  background:linear-gradient(
+    180deg,
+    rgba(59,130,246,.45),
+    rgba(59,130,246,.2)
+  );
+  color:#dbeafe;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:1rem;
-  box-shadow:0 0 0 6px rgba(59,130,246,.06);
+  font-size:1.3rem;
+  box-shadow:
+    0 0 0 8px rgba(59,130,246,.1),
+    0 16px 40px rgba(0,0,0,.7);
+  z-index:2;
 }
 
+/* card */
 .timeline-content{
-  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-  padding:22px;
-  border-radius:var(--radius);
-  box-shadow:0 15px 40px rgba(0,0,0,.6);
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.03)
+  );
+  padding:32px 36px;        /* ✅ กล่องใหญ่ขึ้น */
+  border-radius:18px;
+  border:1px solid rgba(59,130,246,.22);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.75),
+    inset 0 1px 0 rgba(255,255,255,.08);
 }
 
 .timeline-content h3{
-  margin:0 0 6px;
+  margin:0 0 8px;
+  font-weight:700;
+  font-size:1.2rem;
 }
 
 .timeline-date{
-  font-size:.9rem;
-  color:#93c5fd;
+  display:inline-block;
+  margin-bottom:12px;
+  font-size:.95rem;
   font-weight:600;
+  color:#93c5fd;
 }
 
 .timeline-content p{
-  margin-top:10px;
+  margin:0;
   color:var(--muted);
+  line-height:1.7;
+  font-size:1rem;
 }
+
+/* ===== Mobile ===== */
+@media (max-width:768px){
+  .timeline{
+    padding-left:64px;
+    max-width:100%;
+  }
+
+  .timeline::before{
+    left:32px;
+  }
+
+  .timeline-icon{
+    left:-64px;
+    width:44px;
+    height:44px;
+    font-size:1.1rem;
+  }
+
+  .timeline-content{
+    padding:26px 24px;
+  }
+}
+
 
 /* ===== Skills ===== */
 .skills-grid{
