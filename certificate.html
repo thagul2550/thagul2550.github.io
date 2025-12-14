@@ -4,18 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Certificates</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container">
-    <nav>
+    <nav aria-label="main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a class="active" href="certificate.html">Certificates</a>
@@ -25,25 +23,27 @@
 </header>
 
 <main>
-<section class="content container">
-  <h1 class="section-title">Certificates</h1>
+  <section class="content container fade-in">
+    <div class="section-title"><h2>Certificates & Awards</h2></div>
 
-  <div class="card">
-    <h3>CAI CLUB Hackathon</h3>
-    <p>1st Runner-Up – AI Innovator Show & Share Day (2024)</p>
-  </div>
+    <div class="certs">
+      <div class="card cert">
+        <h3>🏆 CAI CLUB HACKATHON</h3>
+        <p class="muted">1st Runner-Up – AI Innovator Show & Share Day</p>
+        <div class="year">2024 · CAI CLUB</div>
+      </div>
 
-  <div class="card">
-    <h3>Super AI Engineer Season 5</h3>
-    <p>Presented project at National AI Exhibition (2024)</p>
-  </div>
-</section>
+      <div class="card cert">
+        <h3>🤖 Super AI Engineer Season 5</h3>
+        <p class="muted">Selected to present project at National AI Exhibition</p>
+        <div class="year">2024 · National AI Exhibition</div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <div class="container small muted">
-    Certificates & Awards
-  </div>
+  <div class="container small muted">Certificates are sourced from competitions and exhibitions.</div>
 </footer>
 
 </body>
