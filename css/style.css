@@ -1037,3 +1037,33 @@ body{
   .cert-grid{ grid-template-columns:1fr; }
   .cert-scroll{ max-height:none; }
 }
+.social-links a {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Tooltip */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%; /* ด้านบนไอคอน */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
