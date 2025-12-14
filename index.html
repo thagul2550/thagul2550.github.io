@@ -2,22 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="certificate.html">Certificates</a>
-  <a href="projects.html">Projects</a>
-</nav>
+<header class="site-header">
+  <div class="container">
+    <nav aria-label="main navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificate.html">Certificates</a>
+    </nav>
+  </div>
+</header>
 
-<section class="hero">
-  <h1>Hi, I'm Your Name 👋</h1>
-  <p>Software Developer • AI Engineer</p>
-</section>
+<main>
+  <section class="hero container fade-in" aria-labelledby="intro-heading">
+    <h1 id="intro-heading">Hi, I'm Your Name — Developer • AI Enthusiast</h1>
+    <p class="lead">I build practical AI & web projects, participate in hackathons, and learn by creating.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="projects.html">View Projects</a>
+      <a class="btn btn-secondary" href="mailto:you@email.com">Contact</a>
+    </div>
+  </section>
+
+  <section class="content container">
+    <div class="section-title">
+      <h2>Featured</h2>
+    </div>
+    <div class="projects-grid">
+      <article class="card">
+        <h3 class="project-title">AI Preventive Maintenance System</h3>
+        <p class="project-desc">Predict equipment failures with time-series models and alerts.</p>
+        <div class="project-links"><a href="#">GitHub</a><a href="#">Demo</a></div>
+      </article>
+
+      <article class="card">
+        <h3 class="project-title">Automatic Exam Generator</h3>
+        <p class="project-desc">Generates question sets automatically using NLP techniques.</p>
+        <div class="project-links"><a href="#">GitHub</a><a href="#">Demo</a></div>
+      </article>
+
+      <article class="card">
+        <h3 class="project-title">More Work</h3>
+        <p class="project-desc">Other projects include web tools, small ML experiments, and portfolio experiments.</p>
+        <div class="project-links"><a href="projects.html">See all</a></div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container small muted">© <span id="year">2025</span> Your Name — Built with HTML & CSS · GitHub Pages friendly</div>
+</footer>
 
 </body>
 </html>

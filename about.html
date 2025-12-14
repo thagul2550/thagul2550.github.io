@@ -2,24 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>About Me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="certificate.html">Certificates</a>
-  <a href="projects.html">Projects</a>
-</nav>
+<header class="site-header">
+  <div class="container">
+    <nav aria-label="main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificate.html">Certificates</a>
+    </nav>
+  </div>
+</header>
 
-<section class="content">
-  <h1>About Me</h1>
-  <p>
-    I am passionate about AI, programming, and hackathons.
-  </p>
-</section>
+<main>
+  <section class="content container fade-in" aria-labelledby="about-heading">
+    <h1 id="about-heading">About Me</h1>
+    <p class="lead">I'm a developer focused on AI, web development, and building tools that solve real problems. I enjoy hackathons, collaborating, and learning new technologies.</p>
+
+    <div style="margin-top:22px">
+      <h2>Interests</h2>
+      <p class="muted">AI · Programming · Web · Data · Hackathons</p>
+    </div>
+
+    <div style="margin-top:22px">
+      <h2>Skills</h2>
+      <div class="skills" aria-label="skills">
+        <span class="skill">Python</span>
+        <span class="skill">Machine Learning</span>
+        <span class="skill">NLP</span>
+        <span class="skill">TensorFlow / PyTorch</span>
+        <span class="skill">HTML & CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Git</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container small muted">© 2025 Your Name — Built for learning and sharing</div>
+</footer>
 
 </body>
 </html>
